@@ -111,13 +111,16 @@ a
     display: flex;
     gap: 11px;
     align-items: center;
+    border: 2px solid var(--color-primary);
+    line-height: 24px;
  }
+ 
 
- .button-outline
+ .button--outline
  {
   color: var(--color-primary);
   background-color: transparent;
-  border: 1.5px solid var(--color-primary);
+  border: 2px solid var(--color-primary);
  }
 /* container*/
 .container
@@ -1951,7 +1954,11 @@ a
    display: flex;
    flex-wrap: wrap;
    gap: 18px;
+   align-items: center;
  }
+
+
+ 
  .product-infor__buttons i {
    font-size: 26px;
  }
