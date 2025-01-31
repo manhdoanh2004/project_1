@@ -15,6 +15,7 @@
 body
 {
     margin: 0px;
+    position: relative;
 }
 
 a
@@ -60,6 +61,76 @@ a
    font-size: 18px;
  }
  
+ /* Box-menu */
+ .box-menu
+ {
+    position: relative;
+    margin: 0px;
+    width: 300px;
+    height:100%;
+   background-color: #ffffff;
+    position: fixed;
+    z-index: 1000;
+    display: none;
+    color: var(--color-primary);
+ }
+ .box-menu a
+ {
+  color: #EBEEEF;
+ }
+ .box-menu__sidebarmenu
+ {
+    padding: 20px 0px 20px 0px ;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    background-color: var(--color-primary);
+    color:white;
+    font-size: 17px;
+   
+ }
+
+ .box-menu__button-close
+ {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    right: 10px;
+    top: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    
+ }
+
+ .box-menu__button-close:hover
+ {
+  color: #000000;
+ }
+
+.box-menu__list .box-menu__item
+{
+  padding: 10px 0px 10px 0px ;
+  width: 100%;
+  padding-left: 20px;
+  font-weight: 500;
+  color: var(--color-primary);
+  display: block;
+  border-radius: 10px;
+}
+.box-menu__list .box-menu__item:hover
+{
+  background-color: #002A48;
+  color: white ;
+}
+
+@media ( (max-width:575.98px)){
+  .box-menu
+  {
+    width: 250px;
+  }
+}
+
+ /* Hết box-menu */
 
  .product-item
  {
@@ -174,6 +245,7 @@ a
  /*Header*/
 .header
 {
+
     padding: 30px 0px;
     position: relative;
     z-index: 999;
@@ -331,7 +403,7 @@ a
   {
     background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
     border-radius: 0px 0px 40px 40px ;
-    margin-top: -104px;
+    margin-top: -107px;
     padding-top: 104px;
    overflow: hidden;
   }
@@ -2565,3 +2637,28 @@ a
 
 
   /* End Sản Phẩm*/
+
+
+
+
+  .form-srch__btn-srch
+  {
+    
+    display: inline-block;
+    background-color: transparent;
+    border: 0px;
+    font-size: 18px; 
+    cursor: pointer;
+  
+    
+   }
+   .form-srch__input
+  {
+    display: none;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    outline: none;
+    border: 0px;
+  }

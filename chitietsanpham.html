@@ -9,11 +9,24 @@
     <link rel="icon" href="assets/Img/Frame.svg">
   </head>
   <body>
+     <!-- sidebar -->
+     <div class="box-menu" box-menu>
+      <div class="box-menu__button-close">
+          <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="box-menu__sidebarmenu">Menu</div>
+      <div class="box-menu__list">
+          <div ><a href="#" class="box-menu__item"> Giới Thiệu</a></div>
+          <div><a href="#" class="box-menu__item" > Liên Hệ</a></div>
+          <div><a href="Danhsachsanpham.html" class="box-menu__item" > Danh sách sản phẩm</a></div>
+          
+      </div>
+  </div>
     <!--header-->
     <header class="header">
       <div class="container">
         <div class="header__wrap">
-          <div class="header__button-menu"><i class="fa-solid fa-bars"></i></div>
+          <div class="inner-button-menu"><i class="fa-solid fa-bars"></i></div>
           <div class="header__logo"><a href="index.html"><img alt="Monito" src="assets/Img/Frame.svg"></a></div>
           <nav class="header__menu">
             <ul>
@@ -26,7 +39,14 @@
           <form class="header__search" action=""><i class="fa-solid fa-magnifying-glass"></i>
             <input placeholder="Nhập từ khóa...." type="text">
           </form><a class="button" href="#">tham gia cộng đồng</a>
-          <div class="header__button-search"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div class="inner-button-search" test>
+
+            <form class="form-srch" action="">
+             <input type="text" placeholder="Nhập vào từ khóa.." class="form-srch__input" >
+             <div class="form-srch__btn-srch"> <i class="fa-solid fa-magnifying-glass"></i></div>
+            </form>
+           
+         </div>
         </div>
       </div>
       <!--End header-->
@@ -186,5 +206,7 @@
       </div>
     </footer>
     <!--End Footer-->
+
+    <script src="./assets/Js/script.js"></script>
   </body>
 </html>

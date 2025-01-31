@@ -10,8 +10,24 @@
 
 </head>
 <body>
+  
+    
+    <!-- sidebar -->
+    <div class="box-menu" box-menu>
+        <div class="box-menu__button-close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="box-menu__sidebarmenu">Menu</div>
+        <div class="box-menu__list">
+            <div ><a href="#" class="box-menu__item"> Giới Thiệu</a></div>
+            <div><a href="#" class="box-menu__item" > Liên Hệ</a></div>
+            <div><a href="Danhsachsanpham.html" class="box-menu__item">Danh sách sản phẩm</a>  </div>
+        </div>
+    </div>
+    <!-- End sidebar -->
     <!-- header -->
     <header class="header">
+      
         <div class="container">
             <div class="inner-wrap">
                 <div class="inner-button-menu">
@@ -53,8 +69,13 @@
                 <a href="#" class="button">
                     tham gia cộng đồng
                 </a>
-                <div class="inner-button-search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="inner-button-search" test>
+
+                   <form class="form-srch" action="">
+                    <input type="text" placeholder="Nhập vào từ khóa.." class="form-srch__input" >
+                    <div class="form-srch__btn-srch"> <i class="fa-solid fa-magnifying-glass"></i></div>
+                   </form>
+                  
                 </div>
             </div>
         </div>
@@ -117,7 +138,7 @@
                     </h2>
                 </div>
                 <div class="inner-itemright">
-                   <a href="#" class="button button-outline">
+                   <a href="Danhsachsanpham.html" class="button button-outline">
                     Xem thêm
                     <i class="fa-solid fa-angle-right"></i>
                    </a>
@@ -353,5 +374,8 @@
         </div>
      </footer>
     <!-- End Footer -->
+
+    <script src="./assets/Js/script.js"></script>
+
 </body>
 </html>
