@@ -39,39 +39,70 @@
 //     });
 // }
 
+
+
+
+
 onValue(productListRef, (items) => {
     let htmlItem=``;
-  items.forEach((item) => {
+    const listProducts=document.querySelector("[products]");
+    items.forEach((item) => {
    
-    const itemKey=item.key;
-    const itemvalue=item.val();
-    console.log(itemKey, itemvalue);
+        const itemKey=item.key;
+        const itemvalue=item.val();
+      
+        const newItem=document.createElement("li");
+        newItem.innerHTML=` <div class="main">
+                        <img  img-product src="${itemvalue.img}" alt="">
+                        <h3 name-product>${itemvalue.title}</h3>
+                        <div class="btn-list">
+                            <button btn_show="${itemKey}"><i class="fa-solid fa-chevron-down"></i></button>
+                            <button btn_edit="${itemKey}"><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button btn_delete="${itemKey}"><i class="fa-regular fa-trash-can"></i></button>
+                        </div>
+                    </div>
+                        <div dse-product class="dse-product" >
+                                <p> Giống : ${itemvalue.gender}</p>
+                                <p> Tuổi : ${itemvalue.age<10? "0"+itemvalue.age : itemvalue.age} tháng</p>
+                                <p> <b>Giá</b> : ${itemvalue.price>0 ? itemvalue.price.toLocaleString('vi-VN'): 0} vnđ</p>
+                        </div>`;
 
-    htmlItem+=`   <li >
-                   <div class="main">
-                    <img  img-product src="${itemvalue.img}" alt="">
-                    <h3 name-product>${itemvalue.title}</h3>
-                     <div class="btn-list">
-                        <button btn_show="${itemKey}"><i class="fa-solid fa-chevron-down"></i></button>
-                        <button btn_edit="${itemKey}"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button btn_delete="${itemKey}"><i class="fa-regular fa-trash-can"></i></button>
-                     </div>
-                   </div>
-                     <div dse-product class="dse-product" >
-                            <p> Giống : ${itemvalue.gender}</p>
-                            <p> Tuổi : ${itemvalue.age<10? "0"+itemvalue.age : itemvalue.age} tháng</p>
-                            <p> <b>Giá</b> : ${itemvalue.price>0 ? itemvalue.price.toLocaleString('vi-VN'): 0} vnđ</p>
-                     </div>
-                </li>`;
+        //Thêm sản phẩm vào trong danh sách
+        if(listProducts)
+        {
+        listProducts.appendChild(newItem);
+        }
+
+        //Show thông tin chi tiết của sản phẩm
+        const buttonShow=newItem.querySelector("[btn_show]");
+        if(buttonShow)
+        {
+
+            buttonShow.addEventListener("click",()=>
+            {
+                const dseProduct=newItem.querySelector("[dse-product]");
+        
+                if(dseProduct)
+                {
+                    if(dseProduct.style.display=="none")
+                    {
+                        dseProduct.style.display="block";
+                        buttonShow.innerHTML=`<i class="fa-solid fa-angle-up"></i>`
+                    }
+                    else
+                    {
+                        dseProduct.style.display="none";
+                         buttonShow.innerHTML=`<i class="fa-solid fa-chevron-down"></i>`
+                    }
+                }
+            });
+        }
+         //End show thông tin chi tiết của sản phẩm
+
+
+    
   });
 
-
-  //Thêm sản phẩm vào trong danh sách
-    const listProducts=document.querySelector("[products]");
-    if(listProducts)
-    {
-            listProducts.innerHTML=htmlItem;
-    }
   });
 
 
