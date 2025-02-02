@@ -2662,3 +2662,110 @@ a
     outline: none;
     border: 0px;
   }
+
+
+
+  .formproduct input,button
+  {
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid gray;
+  }
+  .formproduct input
+  {
+    padding-left: 10px;
+  }
+  .product-sapp
+  {
+    width: 400px;
+    padding: 10px;
+    margin: 10%auto;
+    text-align: center;
+  }
+.product-list
+{
+  border: 1px solid gray;
+ 
+  border-radius: 20px;
+  margin: 10%auto;
+  width: 600px;
+  overflow: hidden;
+}
+  .product-list__title
+  {
+    color: white;
+    margin-top: 0px;
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #003459;
+  }
+  .product-list ul 
+  {
+    list-style: none;
+    padding-left: 0px;
+    width: 100%;
+    padding: 15px;
+    margin: 0px;
+  }
+  .product-list ul li 
+  {
+   
+    width: 100%;
+   
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(192, 172, 172);
+  }
+  .product-list ul li .main
+  {
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .product-list ul li img
+  {
+    width: 100px;
+    border-radius: 20px;
+  }
+  .btn-list
+  {
+    display: flex;
+    gap: 10px;
+  }
+  .btn-list button
+  {
+  
+    display: inline-block;
+    border: 0px;
+    padding: 0px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .product-list .createItem--
+  {
+    
+    display: block;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #002A48;
+    height: 70px;
+    font-size: 15px;
+    color: white;
+   
+  }
+
+  .dse-product
+  {
+    display: none;
+    
+  }
