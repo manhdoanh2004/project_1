@@ -242,6 +242,9 @@ a
 
 /* End container*/
 
+
+/* Trang chủ */
+
  /*Header*/
 .header
 {
@@ -1345,6 +1348,29 @@ a
    left: -18%;
    height: 98%;
 }
+
+
+}
+
+
+@media (max-width :385.98px)
+{
+  .section-3 .inner-buttons a
+  {
+    padding: 12px 16px;
+    font-weight:300;
+  
+  }
+
+  .section-3 .inner-buttons a
+  {
+    gap:0 ;
+  }
+
+  .section-3 .inner-wrap .inner-content
+  {
+    padding-top: 18px;
+  }
 }
   /* End Section-3 */
 
@@ -1714,6 +1740,9 @@ a
 }
 }
   /*End  Section-5*/
+
+
+  /* Trang chủ================================== */
 
   /* Trang chi tiết sản phẩm=============================*/
 
