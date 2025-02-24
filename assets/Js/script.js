@@ -122,9 +122,7 @@ if(closeBoxup)
         }
     });
 }
-
 //Hết Đóng box-up
-
 
 
 
@@ -149,8 +147,12 @@ if(menu)
     {
 
         const sidebar=document.querySelector("[box-menu]");
-        
-        sidebar.style.display="block";
+        if(sidebar)
+            {
+       
+                sidebar.setAttribute("box-menu","show")
+            } 
+      
     });
 }
 
@@ -161,26 +163,27 @@ if(closemenu)
     closemenu.addEventListener("click",()=>{
         const sidebar=document.querySelector("[box-menu]");
    
-        sidebar.style.display="none";
+        sidebar.setAttribute("box-menu","")
     });
 }
 //Hết đóng box menu
 
 //khi click vào nút tìm kiếm thì nút tìm kiếm sẽ ẩn đi , ô input sẽ hiển thì và focus vào input
-const  formButtonsrch=document.querySelector(".form-srch__btn-srch");
+const  formButtonsrch=document.querySelector("[Search1] .form-srch");
 
 if(formButtonsrch)
 {
-    formButtonsrch.addEventListener("click",()=>
-    {
-        const formsrchinput=document.querySelector(".form-srch__input");
-        if(formsrchinput)
-        {
-            formsrchinput.style.display="inline-block";
-            formButtonsrch.style.display="none";
-            formsrchinput.focus();
-        }
-    });
+    // formButtonsrch.addEventListener("click",()=>
+    // {
+    //     const formsrchinput=document.querySelector("[showSearch]");
+    //     if(formsrchinput)
+    //     {
+    //         formsrchinput.style.display="inline-block";
+    //         formButtonsrch.style.display="none";
+    //         formsrchinput.focus();
+    //     }
+    // });
+    console.log("search 1")
 }
 //End khi click vào nút tìm kiếm thì nút tìm kiếm sẽ ẩn đi , ô input sẽ hiển thì và focus vào input
 

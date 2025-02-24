@@ -71,9 +71,19 @@ a
    background-color: #ffffff;
     position: fixed;
     z-index: 1000;
-    display: none;
+    /* display: none; */
     color: var(--color-primary);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
  }
+
+ [box-menu="show"] 
+ {
+  transform: translateX(0);
+
+ }
+
+
  .box-menu a
  {
   color: #EBEEEF;
@@ -184,6 +194,12 @@ a
     align-items: center;
     border: 2px solid var(--color-primary);
     line-height: 24px;
+    transition-duration: 1s; 
+ }
+ .button:hover
+ {
+  background-color:transparent;
+  color:  var(--color-primary);
  }
  
 
@@ -192,7 +208,14 @@ a
   color: var(--color-primary);
   background-color: transparent;
   border: 2px solid var(--color-primary);
+  transition-duration: 1s; 
  }
+ .button--outline:hover
+ {
+  background-color: var(--color-primary);
+  color: white;
+ }
+
 /* container*/
 .container
 {
@@ -2808,6 +2831,7 @@ a
   display: none;
  
 }
+
   .box-up__layout
   {
   
