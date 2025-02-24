@@ -42,7 +42,7 @@
 
 
 
-
+//Lấy ra dữ liệu sản phẩm từ firebase
 onValue(productListRef, (items) => {
     let htmlItem=``;
     const listProducts=document.querySelector("[products]");
@@ -105,6 +105,25 @@ onValue(productListRef, (items) => {
 
   });
 
+//Hết lấy ra dữ liệu sản phẩm từ firebase
+
+
+//Đóng box-up
+
+const closeBoxup=document.querySelector(".box-up__close");
+if(closeBoxup)
+{
+    closeBoxup.addEventListener("click",()=>
+    {
+        const boxUp=document.querySelector(".box-up");
+        if(boxUp)
+        {
+            boxUp.style.display="none";
+        }
+    });
+}
+
+//Hết Đóng box-up
 
 
 
@@ -177,4 +196,3 @@ if(formsrchinput)
         });
 }
 //End Khi mất trọng tâm thì dòng input ẩn đi và nút tìm kiếm sẽ hiển thị lại
-
